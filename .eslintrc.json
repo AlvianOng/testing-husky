@@ -4,7 +4,16 @@
     "es2021": true,
     "jest": true
   },
-  "extends": ["react-app", "react-app/jest", "plugin:import/typescript", "plugin:react/recommended", "airbnb", "airbnb/hooks", "airbnb-typescript"],
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:import/typescript",
+    "plugin:react/recommended",
+    "airbnb",
+    "airbnb/hooks",
+    "airbnb-typescript",
+    "plugin:prettier/recommended"
+  ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaFeatures": {
@@ -14,29 +23,14 @@
     "sourceType": "module",
     "project": "./tsconfig.json"
   },
-  "plugins": ["react", "@typescript-eslint"],
+  "plugins": ["react", "@typescript-eslint", "prettier"],
   "rules": {
+    "prettier/prettier": "error",
+    "arrow-body-style": "off",
+    "prefer-arrow-callback": "off",
     "react/jsx-uses-react": "off",
     "react/react-in-jsx-scope": "off",
     "react/jsx-props-no-spreading": "off",
-    "react/function-component-definition": "off",
-    "comma-dangle": "off",
-    "@typescript-eslint/comma-dangle": "off",
-    "object-curly-newline": "off",
-    "@typescript-eslint/object-curly-newline": "off",
-    "quotes": [
-      "error",
-      "double",
-      {
-        "avoidEscape": true
-      }
-    ],
-    "@typescript-eslint/quotes": [
-      "error",
-      "double",
-      {
-        "avoidEscape": true
-      }
-    ]
+    "react/function-component-definition": "off"
   }
 }
